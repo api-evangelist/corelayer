@@ -1,0 +1,35 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com/cli/overview + https://docs.corelayer.com/anomalies/sdk-metrics + changelog v1.3.0
+summary:
+  types: [apiKey]
+  api_key_in: [header]
+  oauth2_flows: []
+  rbac: true
+schemes:
+- name: apiKey
+  type: apiKey
+  in: header
+  header: Authorization
+  format: Bearer <api-key>
+  key_prefixes: [cl_live_, cl_key_, clr_]
+  description: >-
+    Corelayer v1 REST API authenticates with an API key sent as a bearer token
+    in the Authorization header. Keys are created from the dashboard
+    (Settings > API Keys) or via the API (POST /api/v1/api-keys), shown once,
+    and can carry an optional expiration. Access is governed by role-based
+    access control (RBAC) with per-key rate limiting and configurable tiers.
+  sources: [docs]
+browser_login:
+  description: >-
+    The CLI supports an interactive browser OAuth-style authorization flow
+    (corelayer login) that authorizes CLI access for the current organization
+    and stores the resulting API key + server URL in ~/.corelayer/config.json.
+  auth_server: https://app.corelayer.com
+credential_resolution_order:
+- CORELAYER_API_KEY environment variable
+- token stored in ~/.corelayer/config.json (from corelayer login)
+notes: >-
+  Legacy internal HMAC authentication was removed in v1.3.0 (March 2026) in
+  favor of API key auth. No OAuth2/OIDC scopes surface is published; scopes/ is
+  intentionally omitted (key-auth + RBAC, not OAuth scopes).
