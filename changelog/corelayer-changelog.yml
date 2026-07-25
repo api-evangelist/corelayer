@@ -1,0 +1,62 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com/changelog
+scheme: semver + dated monthly releases
+current_version: v1.3.0+
+entries:
+- date: '2026-06'
+  version: null
+  url: https://docs.corelayer.com/changelog/june-2026
+  highlights:
+  - Preflight checks and organization memory
+  - CLI issue slug lookup
+  - Issue diffing for post-deploy triage
+  breaking: false
+- date: '2026-05'
+  version: null
+  url: https://docs.corelayer.com/changelog/may-2026
+  highlights:
+  - Custom Webhook integration for sending alerts from any monitoring tool
+  breaking: false
+- date: '2026-04'
+  version: null
+  url: https://docs.corelayer.com/changelog/april-2026
+  highlights:
+  - MCP server
+  - Bulk close
+  - Non-interactive CLI auth
+  - Agent-agnostic skill
+  - PII masking
+  - Anomaly detection
+  - 15 integrations
+  breaking: false
+- date: '2026-03-15'
+  version: v1.3.0
+  url: https://docs.corelayer.com/changelog/march-2026
+  highlights:
+  - V1 REST API (api/v1) with API-key auth + RBAC and per-key rate limiting
+  - Corelayer CLI (@corelayer-ai/cli)
+  - Agent learnings extraction from tool traces
+  - SQS retry reliability fixes
+  breaking: true
+  breaking_notes: Removed legacy internal HMAC authentication in favor of API key auth.
+- date: '2026-02'
+  version: v1.2.0
+  url: https://docs.corelayer.com/changelog/february-2026
+  highlights:
+  - Deep Research
+  - Anomaly Detection SDK
+  breaking: false
+- date: '2026-01'
+  version: v1.1.0
+  url: https://docs.corelayer.com/changelog/january-2026
+  highlights:
+  - Dynamic Maps
+  - Integration Reliability
+  breaking: false
+- date: '2025-12'
+  version: v1.0.0
+  url: https://docs.corelayer.com/changelog/december-2025
+  highlights:
+  - Corelayer General Availability
+  breaking: false

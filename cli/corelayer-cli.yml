@@ -1,0 +1,82 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com/cli/overview
+name: Corelayer CLI
+package: "@corelayer-ai/cli"
+binary: corelayer
+prerequisites:
+- Node.js 18+
+- npm
+- A Corelayer account with access to at least one organization
+install:
+- method: npm
+  command: npm install -g @corelayer-ai/cli
+verify: corelayer --version
+authentication:
+- method: browser-login
+  command: corelayer login
+  note: Opens the app, authorizes CLI access, stores API key + server URL in ~/.corelayer/config.json
+- method: env-var
+  variable: CORELAYER_API_KEY
+  note: For CI/CD, agents, and headless environments; no login command required.
+- method: pipe-token
+  command: printf '%s' "$CORELAYER_API_KEY" | corelayer login --with-token --api-url https://api.corelayer.com
+env_vars:
+- name: CORELAYER_API_KEY
+  description: API key for non-interactive auth (skips login)
+- name: CORELAYER_API_URL
+  description: Server URL
+  default: https://api.corelayer.com
+- name: CORELAYER_AUTH_URL
+  description: Auth server URL for browser login
+  default: https://app.corelayer.com
+global_flags:
+- name: --json
+  description: Output as JSON for scripting
+- name: -q, --quiet
+  description: Suppress non-essential output
+- name: --api-url <url>
+  description: Override the configured API server
+- name: --no-color
+  description: Disable colored output
+- name: -h, --help
+- name: -v, --version
+commands:
+- name: login
+  description: Authenticate with Corelayer (opens browser)
+- name: logout
+  description: Sign out and clear local credentials
+- name: groups
+  description: List and inspect groups
+  subcommands: [list]
+- name: issues
+  description: List, inspect, and manage issues
+  subcommands: [list, get, diff, summary, close, bulk-close, reopen, delete]
+- name: preflight
+  description: Check a change against org memory before you push
+- name: integrations
+  description: List integrations for a group
+  subcommands: [list]
+- name: config
+  description: Read and write local CLI config
+  subcommands: [get, set]
+- name: install-skill
+  description: Install the Corelayer agent skill
+- name: uninstall-skill
+  description: Remove the Corelayer agent skill
+flows:
+- name: Investigate issues in one group
+  steps:
+  - corelayer groups list --json
+  - corelayer config set default-group <group-id>
+  - corelayer issues list --json --status Open
+  - corelayer issues get <issue-id-or-slug> --json
+  - corelayer issues diff --duration 2hours --limit 50 --json
+- name: Preflight a change before opening a PR
+  steps:
+  - corelayer preflight
+pagination:
+  params: [--limit, --page]
+  default_limit: 20
+  max_limit: 100
+support: mailto:support@corelayer.com

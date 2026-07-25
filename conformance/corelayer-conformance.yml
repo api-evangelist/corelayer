@@ -1,0 +1,25 @@
+generated: '2026-07-18'
+method: searched
+source: https://www.corelayer.com + https://docs.corelayer.com
+standards:
+- id: soc2-type-ii
+  conforms: true
+  evidence: Published SOC 2 Type II compliance (homepage + Trust Center + llms.txt).
+- id: rest
+  conforms: true
+  evidence: v1 REST API (api/v1) documented in changelog v1.3.0.
+- id: rbac
+  conforms: true
+  evidence: Role-based access control on the v1 REST API (changelog v1.3.0).
+- id: mcp
+  conforms: true
+  evidence: Published Model Context Protocol server (remote + local).
+- id: oauth2
+  conforms: false
+  evidence: API-key auth with RBAC; no OAuth2 authorization-server surface published.
+- id: rfc9457-problem-details
+  conforms: false
+  evidence: No published error catalog / problem+json reference.
+- id: openapi
+  conforms: false
+  evidence: No public OpenAPI/Swagger document found (openapi.json/yaml 404).

@@ -1,0 +1,67 @@
+generated: '2026-07-18'
+method: searched
+status: published
+source: https://docs.corelayer.com/cli/mcp-server
+server:
+  name: corelayer
+  remote:
+    transport: http
+    url: https://api.corelayer.com/mcp
+    auth: bearer            # Authorization: Bearer cl_key_...
+  local:
+    transport: stdio
+    command: npx
+    args: ["-y", "@corelayer-ai/mcp"]
+    package: "@corelayer-ai/mcp"
+    env:
+    - CORELAYER_API_KEY
+    - CORELAYER_API_URL       # default https://api.corelayer.com
+    - CORELAYER_DEFAULT_GROUP
+    - CORELAYER_TIMEOUT_MS    # default 30000
+modes:
+- mode: remote
+  best_for: Hosted connectors, team workflows, web agents
+  install_required: false
+- mode: local
+  best_for: Coding agents that run local stdio MCP commands
+  install_required: true
+tools:
+# Remote (read-only) tools
+- name: corelayer.list_groups
+  type: read
+  description: List Corelayer groups the API key can access.
+- name: corelayer.list_issues
+  type: read
+  description: List issues for a group with filters and pagination.
+- name: corelayer.get_issue
+  type: read
+  description: Fetch detailed issue context, root cause, trace, and metadata.
+- name: corelayer.get_issue_summary
+  type: read
+  description: Fetch issue summary statistics for a group.
+- name: corelayer.list_integrations
+  type: read
+  description: List connected integration accounts for a group.
+- name: corelayer.search_org_memory
+  type: read
+  description: Search organization memory for historical context.
+- name: corelayer.preflight
+  type: read
+  description: Check a PR description against org memory; return failure modes to double-check.
+# Local-only (write) tools
+- name: corelayer.close_issue
+  type: write
+  description: Close one issue, optionally with feedback.
+  local_only: true
+- name: corelayer.reopen_issue
+  type: write
+  description: Reopen one issue, optionally with feedback.
+  local_only: true
+- name: corelayer.bulk_close_issues
+  type: write
+  description: Close multiple explicitly selected issues (caps at 500 IDs; requires explicit IDs).
+  local_only: true
+notes: >-
+  Remote MCP exposes read-only tools only. Write tools (close/reopen/bulk-close)
+  are available only through the local stdio package for authenticated local
+  agents.

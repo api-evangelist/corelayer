@@ -1,0 +1,23 @@
+generated: '2026-07-18'
+method: generated
+source: >-
+  Grounded in the real, provider-documented Corelayer CLI command surface
+  (https://docs.corelayer.com/cli/overview) and MCP tools
+  (https://docs.corelayer.com/cli/mcp-server). Corelayer also ships its own
+  installable agent skill via `corelayer install-skill`
+  (https://docs.corelayer.com/cli/corelayer-skill) — these two packaged skills
+  mirror its marquee flows for the API Evangelist catalog.
+provider_skill:
+  ships: true
+  install: corelayer install-skill
+  file: SKILL.md (bundled inside the @corelayer-ai/cli npm package)
+  docs: https://docs.corelayer.com/cli/corelayer-skill
+skills:
+- file: corelayer-triage-production-issues.md
+  name: Triage production issues with Corelayer
+  api: https://docs.corelayer.com/cli/overview
+  operations: [list_groups, list_issues, get_issue, get_issue_summary, issues_diff]
+- file: corelayer-preflight-a-change.md
+  name: Preflight a change against org memory before a PR
+  api: https://docs.corelayer.com/cli/overview
+  operations: [preflight, search_org_memory]

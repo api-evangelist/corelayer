@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+probe: false
+url: https://trust.corelayer.com
+certifications:
+- SOC 2 Type II
+security_posture:
+- On-prem and BYOC deployment
+- Configurable PII masking / redaction
+- Zero data retention by default
+- Confidential compute
+evidence:
+- source: https://www.corelayer.com/
+  claim: "Trust Center: SOC 2 Type II compliance, security posture, and data controls."
+- source: https://www.corelayer.com/llms.txt
+  claim: "[Trust Center](https://trust.corelayer.com): SOC 2 Type II compliance, security posture, and data controls."
+notes: >-
+  trust.corelayer.com is a client-rendered app; certification named from the
+  company homepage and published llms.txt. No responsible-disclosure page,
+  security.txt, or bug-bounty program was found (probe-security-programs.py:
+  vdp=none). VulnerabilityDisclosure artifact intentionally omitted (no evidence).

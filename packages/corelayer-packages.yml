@@ -1,0 +1,33 @@
+generated: '2026-07-18'
+method: searched
+source: https://registry.npmjs.org (@corelayer-ai scope) + https://docs.corelayer.com
+packages:
+- language: javascript
+  registry: npm
+  name: "@corelayer-ai/cli"
+  version: 0.5.1
+  url: https://www.npmjs.com/package/@corelayer-ai/cli
+  install: npm install -g @corelayer-ai/cli
+  description: Corelayer CLI — manage groups, issues, and integrations from the terminal.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@corelayer-ai/sdk"
+  version: 0.1.0
+  url: https://www.npmjs.com/package/@corelayer-ai/sdk
+  install: npm install @corelayer-ai/sdk
+  description: Lightweight TypeScript SDK for the Corelayer API — batch metrics collection with automatic retries.
+  official: true
+- language: javascript
+  registry: npm
+  name: "@corelayer-ai/mcp"
+  version: 0.1.0
+  url: https://www.npmjs.com/package/@corelayer-ai/mcp
+  install: npx -y @corelayer-ai/mcp
+  description: Corelayer local stdio MCP server.
+  official: true
+notes: >-
+  The unscoped npm package "corelayer" (1.0.0, "Official Node.js SDK for Core
+  Layer") belongs to an unrelated company (Core Layer, a Belgian cloud MSP) and
+  is intentionally excluded. First-party libraries all live under the
+  @corelayer-ai npm scope.

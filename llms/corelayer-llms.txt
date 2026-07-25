@@ -1,0 +1,40 @@
+# source: https://docs.corelayer.com/llms.txt
+# fetched: 2026-07-18 (verbatim)
+
+# Corelayer
+
+## Docs
+
+- [Anomaly Detection](https://docs.corelayer.com/anomalies/overview.md): Monitor your data pipelines and infrastructure for unexpected changes in volume, column values, and schema.
+- [SDK Metrics](https://docs.corelayer.com/anomalies/sdk-metrics.md): Track custom metrics from your data pipelines using the Corelayer SDK.
+- [Table Monitoring](https://docs.corelayer.com/anomalies/table-monitoring.md): Monitor database tables for anomalies in data volume, column values, and schema changes.
+- [April 2026](https://docs.corelayer.com/changelog/april-2026.md): MCP server, bulk close, non-interactive CLI auth, agent-agnostic skill, PII masking, anomaly detection, and 15 integrations.
+- [December 2025](https://docs.corelayer.com/changelog/december-2025.md): v1.0.0 — Corelayer General Availability.
+- [February 2026](https://docs.corelayer.com/changelog/february-2026.md): v1.2.0 — Deep Research & Anomaly Detection SDK.
+- [January 2026](https://docs.corelayer.com/changelog/january-2026.md): v1.1.0 — Dynamic Maps & Integration Reliability.
+- [June 2026](https://docs.corelayer.com/changelog/june-2026.md): Preflight checks and organization memory, plus CLI issue slug lookup and issue diffing for post-deploy triage.
+- [March 2026](https://docs.corelayer.com/changelog/march-2026.md): v1.3.0 — REST API, CLI & Agent Learnings.
+- [May 2026](https://docs.corelayer.com/changelog/may-2026.md): Custom Webhook integration for sending alerts from any monitoring tool.
+- [Corelayer Skill](https://docs.corelayer.com/cli/corelayer-skill.md): Install the Corelayer skill so supported AI agents automatically know how to use the CLI for production tasks.
+- [Corelayer MCP Server](https://docs.corelayer.com/cli/mcp-server.md): Connect AI agents and MCP-compatible tools to Corelayer issues, integrations, and organization memory.
+- [Corelayer CLI](https://docs.corelayer.com/cli/overview.md): Install the Corelayer CLI, authenticate with your organization, and use it from the terminal or an AI agent.
+- [What is Corelayer?](https://docs.corelayer.com/index.md): The agent-native platform for production software support and maintenance.
+- [Apache Airflow Integration](https://docs.corelayer.com/integrations/airflow.md): Connect Apache Airflow to Corelayer to monitor DAGs and enable intelligent debugging of workflow failures.
+- [AWS Integration](https://docs.corelayer.com/integrations/aws.md): Connect your AWS account to Corelayer to monitor CloudWatch logs, RDS databases, and S3 buckets with intelligent debugging.
+- [ClickHouse Integration](https://docs.corelayer.com/integrations/clickhouse.md): Connect your ClickHouse database to Corelayer to enable intelligent querying and debugging with your analytics data.
+- [Cloudflare Integration](https://docs.corelayer.com/integrations/cloudflare.md): Connect your Cloudflare account to Corelayer to monitor Workers and enable intelligent debugging of your edge applications.
+- [Custom Webhook Integration](https://docs.corelayer.com/integrations/custom-webhook.md): Send alerts from any monitoring tool to Corelayer using a generic webhook endpoint.
+- [Datadog Integration](https://docs.corelayer.com/integrations/datadog.md): Connect your Datadog account to Corelayer to monitor logs, services, and metrics with intelligent debugging.
+- [GCP Integration](https://docs.corelayer.com/integrations/gcp.md): Connect your Google Cloud Platform project to Corelayer to monitor Cloud Run, Cloud Functions, GKE, and more.
+- [GitHub Integration](https://docs.corelayer.com/integrations/github.md): Connect your GitHub repositories to Corelayer for code context, intelligent debugging, and optional pull request creation.
+- [incident.io Integration](https://docs.corelayer.com/integrations/incidentio.md): Connect incident.io to Corelayer to receive alerts and enable intelligent incident debugging and response.
+- [Merge Integration](https://docs.corelayer.com/integrations/merge.md): Connect Merge to Corelayer to access HR and HCM platform data for context-aware debugging and analysis.
+- [Oracle Cloud (OCI) Integration](https://docs.corelayer.com/integrations/oci.md): Connect Oracle Cloud Infrastructure to Corelayer to monitor log groups and enable intelligent debugging.
+- [PlanetScale Integration](https://docs.corelayer.com/integrations/planetscale.md): Connect your PlanetScale database to Corelayer to enable intelligent querying and debugging with your application data.
+- [Sentry Integration](https://docs.corelayer.com/integrations/sentry.md): Connect your Sentry account to Corelayer to enhance error monitoring and enable intelligent debugging of your applications.
+- [Slack Integration](https://docs.corelayer.com/integrations/slack.md): Connect Slack to Corelayer to receive real-time notifications and debugging summaries in your team channels.
+- [Microsoft Teams Integration](https://docs.corelayer.com/integrations/teams.md): Connect Microsoft Teams to Corelayer to receive real-time notifications and debugging summaries in your team channels.
+- [Trigger.dev Integration](https://docs.corelayer.com/integrations/trigger-dev.md): Connect Trigger.dev to Corelayer to monitor background jobs and enable intelligent debugging of job failures.
+- [Vercel Integration](https://docs.corelayer.com/integrations/vercel.md): Connect your Vercel projects to Corelayer to monitor deployments and logs with intelligent debugging.
+- [Organization Memory](https://docs.corelayer.com/memory/overview.md): Corelayer remembers your feedback and what it learns from incidents, then uses that memory to suppress noise and sharpen future analysis.
+- [PII Masking](https://docs.corelayer.com/security/pii-masking.md): Use configurable PII redaction to protect sensitive customer data while preserving debugging context.

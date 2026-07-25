@@ -1,0 +1,21 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com + https://docs.corelayer.com/changelog
+versioning:
+  scheme: uri-path
+  current: v1
+  path: /api/v1
+  product_versioning: semver (v1.0.0 GA Dec 2025 → v1.3.0 Mar 2026)
+  docs: https://docs.corelayer.com/cli/overview
+deprecation:
+  policy_url: null
+  sunset_header: null
+  observed_deprecations:
+  - Legacy internal HMAC authentication removed in v1.3.0 (replaced by API key auth)
+  note: No formal published deprecation/sunset policy page found.
+sla:
+  url: null
+  uptime_target: null
+status_page: https://corelayer.statuspage.io
+changelog: changelog/corelayer-changelog.yml
+deprecated_operations: []

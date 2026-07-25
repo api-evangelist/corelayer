@@ -1,0 +1,20 @@
+generated: '2026-07-18'
+method: searched
+source: live probes 2026-07-18
+hosts:
+- host: https://api.corelayer.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/openid-configuration, status: 404}
+  - {path: /.well-known/oauth-authorization-server, status: 404}
+  - {path: /openapi.json, status: 404}
+- host: https://www.corelayer.com
+  documents:
+  - {path: /.well-known/security.txt, status: 404}
+  - {path: /.well-known/api-catalog, status: 404}
+- host: https://app.corelayer.com
+  documents:
+  - {path: /.well-known/openid-configuration, status: 404}
+notes: >-
+  No /.well-known/ discovery documents are published on any Corelayer host as of
+  2026-07-18. Absence recorded as valid data; no raw well-known files saved.

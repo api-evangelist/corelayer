@@ -1,0 +1,37 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com/integrations/custom-webhook + https://docs.corelayer.com/llms.txt
+spec_type: Webhooks
+direction: inbound
+summary: >-
+  Corelayer receives events (alerts, logs, errors, deploy/job signals) from
+  monitoring and infrastructure tools. A generic Custom Webhook endpoint accepts
+  alerts from any monitoring tool, alongside first-party integrations that push
+  events into Corelayer for debugging and incident correlation. There is no
+  published outbound webhook/AsyncAPI document; this is an ingestion surface.
+webhook_sources:
+- name: Custom Webhook
+  kind: generic-inbound
+  url: https://docs.corelayer.com/integrations/custom-webhook
+  description: Send alerts from any monitoring tool to Corelayer via a generic webhook endpoint.
+integrations:
+- {name: Apache Airflow, docs: https://docs.corelayer.com/integrations/airflow}
+- {name: AWS, docs: https://docs.corelayer.com/integrations/aws}
+- {name: ClickHouse, docs: https://docs.corelayer.com/integrations/clickhouse}
+- {name: Cloudflare, docs: https://docs.corelayer.com/integrations/cloudflare}
+- {name: Datadog, docs: https://docs.corelayer.com/integrations/datadog}
+- {name: GCP, docs: https://docs.corelayer.com/integrations/gcp}
+- {name: GitHub, docs: https://docs.corelayer.com/integrations/github}
+- {name: incident.io, docs: https://docs.corelayer.com/integrations/incidentio}
+- {name: Merge, docs: https://docs.corelayer.com/integrations/merge}
+- {name: Oracle Cloud (OCI), docs: https://docs.corelayer.com/integrations/oci}
+- {name: PlanetScale, docs: https://docs.corelayer.com/integrations/planetscale}
+- {name: Sentry, docs: https://docs.corelayer.com/integrations/sentry}
+- {name: Slack, docs: https://docs.corelayer.com/integrations/slack}
+- {name: Microsoft Teams, docs: https://docs.corelayer.com/integrations/teams}
+- {name: Trigger.dev, docs: https://docs.corelayer.com/integrations/trigger-dev}
+- {name: Vercel, docs: https://docs.corelayer.com/integrations/vercel}
+notes: >-
+  No AsyncAPI document is published; asyncapi/ spec scoring is N/A. This artifact
+  captures the real inbound webhook/event surface and carries the Webhooks
+  pointer only.

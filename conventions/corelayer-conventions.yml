@@ -1,0 +1,41 @@
+generated: '2026-07-18'
+method: searched
+source: https://docs.corelayer.com/cli/overview + changelog v1.3.0
+api_style: REST
+base_url: https://api.corelayer.com
+version_prefix: /api/v1
+authentication:
+  style: api-key
+  transport: Authorization Bearer header
+  rbac: true
+  ref: authentication/corelayer-authentication.yml
+pagination:
+  style: page-number
+  params: [page, limit]
+  default_limit: 20
+  max_limit: 100
+  response_fields: [since, issues, total, page, limit]
+  note: >-
+    Observed on the CLI `issues diff` surface (which mirrors the REST API):
+    paginated with page/limit; default limit 20, maximum 100.
+rate_limiting:
+  model: per-key
+  tiers: configurable
+  signal: HTTP 429 on excess
+  guidance: >-
+    Prefer bulk operations (e.g. bulk-close) over looping single-item mutations
+    to avoid 429 rate limits.
+lookup:
+  note: Issues are addressable by UUID or human-readable slug.
+output:
+  json: true
+  note: Machine-readable JSON output (`--json`) is a first-class mode for agents.
+idempotency:
+  supported: false
+  note: No documented idempotency-key header/parameter as of 2026-07; not asserted.
+error_handling:
+  ref: (no published error catalog; API-level errors not documented in a public reference)
+webhooks:
+  ref: asyncapi/corelayer-webhooks.yml
+lifecycle:
+  ref: lifecycle/corelayer-lifecycle.yml

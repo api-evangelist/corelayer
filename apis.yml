@@ -1,7 +1,18 @@
 aid: corelayer
 name: Corelayer
-description: Corelayer is a company surfaced as a portfolio company of y-combinator and added to the API
-  Evangelist network as a stub for enrichment. This profile is a lead awaiting the enrichment pipeline.
+description: >-
+  Corelayer is an AI-native platform for production software support and
+  maintenance — an AI SRE / AI on-call engineer for engineering teams. It
+  continuously monitors alerts, logs, infrastructure, and underlying data for
+  issues, uses AI agents to investigate and root-cause incidents, and works to
+  prevent them before they impact users. Purpose-built for complex,
+  data-intensive, and regulated environments like finance, fintech, healthcare,
+  and insurance, Corelayer connects to the whole production environment — code,
+  databases, deployments, and observability — with on-prem/BYOC deployment,
+  configurable PII masking, and confidential compute. It exposes a v1 REST API,
+  a first-party CLI, an MCP server, an installable agent skill, custom-webhook
+  ingestion, and a metrics SDK. Backed by Y Combinator (W26); operated by
+  Sevvy AI, Inc.
 url: https://raw.githubusercontent.com/api-evangelist/corelayer/refs/heads/main/apis.yml
 x-type: company
 x-source: vc-portfolio
@@ -9,14 +20,142 @@ x-backed-by:
 - y-combinator
 x-tier: stub
 x-tier-reason: portfolio-lead
+accessModel:
+  pricing: unknown
+  onboarding: self-serve
+  trial: false
+  try_now: false
+  public: false
+  label: Self-serve signup
+  confidence: medium
+  source:
+  - authentication
+  generated: '2026-07-22'
+  method: derived
 specificationVersion: '0.20'
 created: '2026-07-17'
-modified: '2026-07-17'
+modified: '2026-07-18'
+image: https://www.corelayer.com/opengraph-image
 tags:
 - Company
-apis: []
+- AI
+- SRE
+- Incident Response
+- Observability
+- Production Support
+- Root Cause Analysis
+- Anomaly Detection
+- DevOps
+- Agent Native
+- MCP
+- Fintech
+apis:
+- name: Corelayer API
+  description: >-
+    The Corelayer v1 REST API (api/v1) provides programmatic access to issues,
+    groups, integrations, events, anomaly configs, deep research, API keys, and
+    settings. It uses API-key authentication with role-based access control
+    (RBAC) and per-key rate limiting with configurable tiers.
+  humanURL: https://docs.corelayer.com
+  baseURL: https://api.corelayer.com
+  tags:
+  - Incident Response
+  - Issues
+  - Observability
+  - Anomaly Detection
+  properties:
+  - type: Documentation
+    url: https://docs.corelayer.com
+  - type: APIReference
+    url: https://docs.corelayer.com/cli/overview
+  - type: GettingStarted
+    url: https://docs.corelayer.com/cli/overview
+  - type: Authentication
+    url: authentication/corelayer-authentication.yml
+  - type: MCPServer
+    url: mcp/corelayer-mcp.yml
+  - type: CLI
+    url: cli/corelayer-cli.yml
+  - type: Webhooks
+    url: asyncapi/corelayer-webhooks.yml
+  - type: Conventions
+    url: conventions/corelayer-conventions.yml
+  - type: Packages
+    url: packages/corelayer-packages.yml
+  - type: SDKs
+    url: packages/corelayer-packages.yml
+  - type: AgentSkill
+    url: skills/_index.yml
+common:
+- type: DeveloperPortal
+  url: https://docs.corelayer.com
+- type: Documentation
+  url: https://docs.corelayer.com
+- type: APIReference
+  url: https://docs.corelayer.com/cli/overview
+- type: GettingStarted
+  url: https://docs.corelayer.com/cli/overview
+- type: Blog
+  url: https://www.corelayer.com/blog
+- type: ChangeLog
+  url: changelog/corelayer-changelog.yml
+- type: StatusPage
+  url: https://corelayer.statuspage.io
+- type: Pricing
+  url: https://www.corelayer.com/roi
+- type: SignUp
+  url: https://app.corelayer.com/signin
+- type: Login
+  url: https://app.corelayer.com/signin
+- type: Support
+  url: mailto:support@corelayer.com
+- type: TermsOfService
+  url: https://www.corelayer.com/terms-of-service
+- type: PrivacyPolicy
+  url: https://www.corelayer.com/privacy-policy
+- type: TrustCenter
+  url: https://trust.corelayer.com
+- type: Compliance
+  url: https://trust.corelayer.com
+- type: LLMsTxt
+  url: llms/corelayer-llms.txt
+- type: MCPServer
+  url: mcp/corelayer-mcp.yml
+- type: CLI
+  url: cli/corelayer-cli.yml
+- type: AgentSkill
+  url: skills/_index.yml
+- type: Packages
+  url: packages/corelayer-packages.yml
+- type: SDKs
+  url: packages/corelayer-packages.yml
+- type: Authentication
+  url: authentication/corelayer-authentication.yml
+- type: Conventions
+  url: conventions/corelayer-conventions.yml
+- type: Webhooks
+  url: asyncapi/corelayer-webhooks.yml
+- type: Lifecycle
+  url: lifecycle/corelayer-lifecycle.yml
+- type: Conformance
+  url: conformance/corelayer-conformance.yml
+- type: DomainSecurity
+  url: security/corelayer-domain-security.yml
+- type: WellKnown
+  url: well-known/corelayer-well-known.yml
+- type: Twitter
+  url: https://x.com/CorelayerAI
+- type: LinkedIn
+  url: https://www.linkedin.com/company/corelayerai
+- type: YouTube
+  url: https://www.youtube.com/@CorelayerAI
 maintainers:
 - FN: Kin Lane
   email: kin@apievangelist.com
 - FN: APIs.json
   email: info@apis.io
+x-enrichment:
+  date: '2026-07-19'
+  status: backfilled
+  pass: local-v1
+  note: backfilled from .gitignore signal + verified work evidence
