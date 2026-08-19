@@ -7,17 +7,19 @@ server:
   remote:
     transport: http
     url: https://api.corelayer.com/mcp
-    auth: bearer            # Authorization: Bearer cl_key_...
+    auth: bearer
   local:
     transport: stdio
     command: npx
-    args: ["-y", "@corelayer-ai/mcp"]
-    package: "@corelayer-ai/mcp"
+    args:
+    - -y
+    - '@corelayer-ai/mcp'
+    package: '@corelayer-ai/mcp'
     env:
     - CORELAYER_API_KEY
-    - CORELAYER_API_URL       # default https://api.corelayer.com
+    - CORELAYER_API_URL
     - CORELAYER_DEFAULT_GROUP
-    - CORELAYER_TIMEOUT_MS    # default 30000
+    - CORELAYER_TIMEOUT_MS
 modes:
 - mode: remote
   best_for: Hosted connectors, team workflows, web agents
@@ -26,7 +28,6 @@ modes:
   best_for: Coding agents that run local stdio MCP commands
   install_required: true
 tools:
-# Remote (read-only) tools
 - name: corelayer.list_groups
   type: read
   description: List Corelayer groups the API key can access.
@@ -48,7 +49,6 @@ tools:
 - name: corelayer.preflight
   type: read
   description: Check a PR description against org memory; return failure modes to double-check.
-# Local-only (write) tools
 - name: corelayer.close_issue
   type: write
   description: Close one issue, optionally with feedback.
@@ -61,7 +61,12 @@ tools:
   type: write
   description: Close multiple explicitly selected issues (caps at 500 IDs; requires explicit IDs).
   local_only: true
-notes: >-
-  Remote MCP exposes read-only tools only. Write tools (close/reopen/bulk-close)
-  are available only through the local stdio package for authenticated local
-  agents.
+notes: Remote MCP exposes read-only tools only. Write tools (close/reopen/bulk-close) are available only
+  through the local stdio package for authenticated local agents.
+deployment:
+  mode: remote
+  endpoint: https://api.corelayer.com/mcp
+  verified: probed
+  probe: gated
+  checked: '2026-08-12'
+  source: catalog MCP census
