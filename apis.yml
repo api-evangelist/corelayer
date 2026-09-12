@@ -112,6 +112,8 @@ apis:
   - type: AgentSkill
     url: skills/_index.yml
 common:
+- type: Website
+  url: https://www.corelayer.com/
 - type: DeveloperPortal
   url: https://docs.corelayer.com
 - type: Documentation
