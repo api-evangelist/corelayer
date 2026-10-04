@@ -48,6 +48,10 @@ specificationVersion: '0.23'
 created: '2026-07-17'
 modified: '2026-07-18'
 image: https://www.corelayer.com/opengraph-image
+x-docs-platform: mintlify
+x-docs-platform-confidence: medium
+x-docs-platform-checked: 2026-09-24
+x-docs-hosting: vercel
 tags:
 - Company
 - Artificial Intelligence
@@ -58,9 +62,10 @@ tags:
 - Root Cause Analysis
 - Anomaly Detection
 - DevOps
-- agent-native
+- Agent-Native
 - MCP
 - Fintech
+- Incident Management
 tags_raw:
 - Company
 - AI
@@ -74,6 +79,8 @@ tags_raw:
 - Agent Native
 - MCP
 - Fintech
+- agent-native
+- Incident Management
 apis:
 - name: Corelayer API
   description: >-
